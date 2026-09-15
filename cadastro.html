@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Página de cadastro para voluntários e adotantes da Dog Esperança." />
+  <meta name="author" content="Arthur Viturino" />
+  <link rel="icon" href="logo.png" type="image/png" /> <!-- "estou pensando qual imagem colocar" -->
+  <title>Dog Esperança - Cadastro</title>
+</head>
+
+<body>
+
+<header>
+    <h1>Dog Esperança 🐶</h1>
+</header>
+
+<nav>
+    <!-- "Página inicial" -->
+    <a href="index.html">Início</a> 
+
+    <!-- Página com informações detalhadas sobre os projetos da ONG -->
+    <a href="projetos.html">Projetos</a>
+
+    <!-- Página de cadastro para voluntários e adotantes -->
+    <a href="cadastro.html">Cadastre-se</a> 
+
+    <!-- Página com foto e informações dos animais disponíveis para adoção -->
+    <a href="nossosanimais.html">Animais</a>
+</nav> 
+
+<main>
+
+    <section>
+    <h2>Cadastro para Voluntário</h2>
+    </section>
+
+<section>
+<form>
+    <div>
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="nome" 
+            required
+            maxlength="100"
+            minlength="3"
+            placeholder="Seu nome completo"
+        >
+    </div><br>
+
+    <div>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" 
+            required 
+            maxlength="100"
+            minlength="5"
+            placeholder="seu.email@exemplo.com"
+        >
+    </div><br>
+
+    <div>
+        <label for="telefone">Telefone:</label><br>
+        <input type="tel" id="telefone" name="telefone"
+            required
+            maxlength="15" 
+            pattern="\(\d{2}\)\s\d{4,5}-\d{4}" 
+            title="Digite no formato: (00) 00000-0000"
+            placeholder="(00) 00000-0000"
+        >
+    </div><br>
+
+    <button type="submit">Cadastrar</button>
+</form>
+</section>
