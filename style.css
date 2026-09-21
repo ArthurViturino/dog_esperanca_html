@@ -1,0 +1,251 @@
+/* ==================================================
+   Variáveis CSS PARA CORES, TIPOGRAFIA E ESPAÇAMENTO
+   ================================================== */
+:root {
+    /* PALETA DE CORES */
+    --cor-primaria-principal: #4a2e18;
+    --cor-primaria-hover: #6b4423;
+    --cor-secundaria-principal: #2e7d32;
+    --cor-secundaria-hover: #1b5e20;
+    
+    --cor-neutra-fundo: #f9f9f9;
+    --cor-neutra-superficie: #ffffff;
+    --cor-neutra-texto: #222222;
+    --cor-neutra-borda: #e0e0e0;
+
+    /* ESCALA TIPOGRÁFICA */
+    --fonte-tamanho-xs: 0.875rem;
+    --fonte-tamanho-sm: 1rem;
+    --fonte-tamanho-md: 1.25rem;
+    --fonte-tamanho-lg: 1.75rem;
+    --fonte-tamanho-xl: 2.5rem;
+
+    /* ESPAÇAMENTOS MODULARES */
+    --espaco-xs: 8px;
+    --espaco-sm: 16px;
+    --espaco-md: 24px;
+    --espaco-lg: 32px;
+    --espaco-xl: 48px; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: var(--cor-neutra-texto);
+    background-color: var(--cor-neutra-fundo);
+}
+
+/* ESPAÇAMENTO BÁSICO DO CONTEÚDO */
+header, nav, main, footer {
+    padding: var(--espaco-md);
+}
+
+header {
+    background-color: var(--cor-primaria-principal);
+    color: var(--cor-neutra-superficie);
+}
+
+/* MENU DE NAVEGAÇÃO */
+nav {
+    background-color: var(--cor-neutra-borda); 
+}
+
+nav ul {
+    list-style: none; 
+    display: flex; 
+    gap: var(--espaco-md); 
+}
+
+nav a {
+    text-decoration: none; 
+    color: var(--cor-primaria-principal); 
+    font-weight: bold; 
+}
+
+nav a:hover {
+    color: var(--cor-primaria-hover); 
+}
+
+/* CONTEÚDO PRINCIPAL E SEÇÕES */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: var(--espaco-xl);
+}
+
+h2 {
+    color: var(--cor-primaria-principal);
+    font-size: var(--fonte-tamanho-lg);
+    margin-bottom: var(--espaco-sm);
+    border-bottom: 2px solid var(--cor-neutra-borda);
+    padding-bottom: var(--espaco-xs);
+}
+
+h3 {
+    color: var(--cor-primaria-principal);
+    font-size: var(--fonte-tamanho-md);
+    margin-bottom: var(--espaco-xs);
+}
+
+p {
+    margin-bottom: var(--espaco-sm);
+}
+
+/* RODAPÉ */
+footer {
+    background-color: var(--cor-primaria-principal);
+    color: var(--cor-neutra-superficie);
+    text-align: center;
+    font-size: var(--fonte-tamanho-xs);
+}
+
+/* ========================================================
+   NOVOS COMPONENTES: FORMULÁRIOS, BOTÕES, BADGES E ALERTAS
+   ======================================================== */
+
+/* CAMPOS DE FORMULÁRIO */
+form {
+    background-color: var(--cor-neutra-superficie);
+    padding: var(--espaco-md);
+    border-radius: 8px;
+    border: 1px solid var(--cor-neutra-borda);
+    max-width: 600px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: var(--espaco-sm);
+    margin-bottom: 4px;
+    font-size: var(--fonte-tamanho-sm);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: var(--espaco-xs) var(--espaco-sm);
+    border: 1px solid var(--cor-neutra-borda);
+    border-radius: 4px;
+    font-size: var(--fonte-tamanho-sm);
+    background-color: var(--cor-neutra-fundo);
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--cor-primaria-principal);
+    background-color: var(--cor-neutra-superficie);
+    box-shadow: 0 0 5px rgba(74, 46, 24, 0.2);
+}
+
+/* VALIDAÇÃO DOS CAMPOS NO FORMULÁRIO */
+input:valid:not(:placeholder-shown) {
+    border-color: var(--cor-secundaria-principal);
+}
+
+input:invalid:not(:placeholder-shown) {
+    border-color: #d32f2f;
+}
+
+/* BOTÕES COM ESTADOS INTERATIVOS */
+button, 
+input[type="submit"], 
+.btn {
+    display: inline-block;
+    padding: var(--espaco-xs) var(--espaco-md);
+    font-size: var(--fonte-tamanho-sm);
+    font-weight: bold;
+    color: var(--cor-neutra-superficie);
+    background-color: var(--cor-primaria-principal);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: var(--espaco-md);
+    transition: all 0.3s ease;
+}
+
+button:hover, 
+input[type="submit"]:hover, 
+.btn:hover {
+    background-color: var(--cor-primaria-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+button:active, 
+input[type="submit"]:active, 
+.btn:active {
+    transform: translateY(0);
+}
+
+button:focus, 
+input[type="submit"]:focus, 
+.btn:focus {
+    outline: 2px solid var(--cor-secundaria-principal);
+    outline-offset: 2px;
+}
+
+/* Botão de destaque/sucesso */
+.btn-sucesso {
+    background-color: var(--cor-secundaria-principal);
+}
+
+.btn-sucesso:hover {
+    background-color: var(--cor-secundaria-hover);
+}
+
+/* BADGES */
+.badge {
+    display: inline-block;
+    padding: 2px 8px;
+    font-size: var(--fonte-tamanho-xs);
+    font-weight: bold;
+    border-radius: 12px;
+    color: var(--cor-neutra-superficie);
+    margin-left: var(--espaco-xs);
+    vertical-align: middle;
+}
+
+.badge-ativo { background-color: var(--cor-secundaria-principal); }
+.badge-urgente { background-color: #d32f2f; }
+.badge-info { background-color: #1976d2; }
+
+/* ALERTAS */
+.alerta {
+    padding: var(--espaco-sm);
+    border-radius: 4px;
+    margin-bottom: var(--espaco-md);
+    border-left: 5px solid;
+    font-size: var(--fonte-tamanho-sm);
+}
+
+.alerta-info {
+    background-color: #e3f2fd;
+    color: #0d47a1;
+    border-color: #1976d2;
+}
+
+.alerta-sucesso {
+    background-color: #e8f5e9;
+    color: #1b5e20;
+    border-color: var(--cor-secundaria-principal);
+}
+
+.alerta-erro {
+    background-color: #ffebee;
+    color: #c62828;
+    border-color: #d32f2f;
+}
