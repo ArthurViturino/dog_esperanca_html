@@ -1,5 +1,5 @@
 /* ==================================================
-   Variáveis CSS PARA CORES, TIPOGRAFIA E ESPAÇAMENTO
+   VARIÁVEIS CSS PARA CORES, TIPOGRAFIA E ESPAÇAMENTO
    ================================================== */
 :root {
     /* PALETA DE CORES */
@@ -111,6 +111,12 @@ footer {
 /* ========================================================
    NOVOS COMPONENTES: FORMULÁRIOS, BOTÕES, BADGES E ALERTAS
    ======================================================== */
+
+/* CENTRALIZAÇÃO DE FORMULÁRIO */
+main section.secao-cadastro {
+    max-width: 600px;
+    margin: 0 auto var(--espaco-xl) auto;
+}
 
 /* CAMPOS DE FORMULÁRIO */
 form {
